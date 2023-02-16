@@ -15,6 +15,8 @@ The CONOPS and several features of this airplane are similar to an airplane deve
 ![p3](CAD/renders/seaway_mini_packet_Page_3.png)
 ![p4](CAD/renders/seaway_mini_packet_Page_4.png)
 
+![mass](figures/mass_budget.png)
+
 To run:
 
 - Install Python 3.8+, ideally through Anaconda or Miniconda distribution (https://www.anaconda.com/products/distribution)
