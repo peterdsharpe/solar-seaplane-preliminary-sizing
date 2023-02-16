@@ -6,6 +6,8 @@ Peter Sharpe
 
 This repository contains a conceptual design for a small-scale (13 ft. wingspan) solar-electric seaplane. It was produced as part of my teaching for the class MIT 16.821: Flight Vehicle Development, a senior capstone course that covers aircraft detail design and manufacturing. Using this conceptual design as a point of departure, the students will detail-design and build an airplane aiming to demonstrate net-energy-positive daytime flight and water operations.
 
+A more detailed description is available in [the PowerPoint deck of my kickoff lecture](./Point%20of%20Departure.pptx).
+
 The CONOPS and several features of this airplane are similar to an airplane developed by our seniors during Fall 2022 for our companion course 16.82, which is the "design" half of our class. 
 
 ![raytrace](CAD/renders/raytrace.JPG)
