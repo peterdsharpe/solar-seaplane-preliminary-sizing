@@ -1,0 +1,28 @@
+Sizing Summary:
+      Expected total mass = 6.581 kg (14.51 lbm)
+                Wing span = 3.848 m (12.62 ft)
+                Wing area = 1.499 m^2 (16.13 ft^2)
+             Wing loading = 43.1 Pa (14.39 oz/ft^2)
+
+Aerodynamic Design Point (min-sink):
+          Cruise airspeed = 9.38 m/s (30.8 ft/s)
+               Cruise AoA = 0.40 deg
+                Cruise CL = 0.80
+      Elevator deflection = 0 deg (trim built-in to incidence)
+
+Performance Summary at Aerodynamic Design Point:
+Assumes "as-flown" performance, not ideal, unless specified
+                      L/D = 14.8 (ideal: 19.7)
+       No-power sink rate = 0.63 m/s (ignores prop drag)
+       Power to airstream = 40.9 W
+  Total power consumption = 75.1 W
+
+Power Generation Summary:
+Solar conditions: Boston (42.36 N), April 1, 2 p.m. solar time
+       Total solar energy = 784.6 W
+    Realizable solar eff. = 21.0% (includes MPPTs)
+   Total power generation = 165.0 W
+
+For net-zero energy:
+		Climb rate = 0.62 m/s (122 ft/min)
+        Climb gradient = 3.45 deg

@@ -1,0 +1,63 @@
+*****************************************************************
+      SolidWorks Corporation - IGES Processor Status Report
+*****************************************************************
+=================================================================
+General Information
+=================================================================
+Sending System Product I.D.  : Open CASCADE STEP translator 7.6 1.1^seaway_mini_lifting_surfaces_from_asb_converted.SLDPRT
+Receiving System Product I.D.: Open CASCADE STEP translator 7.6 1.1^seaway_mini_lifting_surfaces_from_asb_converted.SLDPRT
+File Name                    : C:\Users\peter\Dropbox (MIT)\School\Grad School\2023 Spring\16.821\preliminary_sizing\seaway_mini_CAD_v3\wing.iges.IGS
+Sending System               : SolidWorks 2021
+Preprocessor Version         : SolidWorks 2021
+File Creation Date           : 230204.125425
+Model Creation Date          : 230204.125425
+Units                        : MM
+Model Space Scale            : 1
+Author                       : peter
+Organization                 : 
+
+
+=================================================================
+Entity Processing Information
+=================================================================
+
+
+=================================================================
+Precision analysis of IGES file:
+=================================================================
+  Most prevalent number of significant digits:              12
+  Highest number of significant digits:                     13
+  Average number of significant digits:                11.8423
+  Maximum distance to origin:                          1954.25
+  Minimum distance to origin:                        0.0952749
+  Effective number of significant digits:                   13
+
+
+=================================================================
+Entity Summary
+=================================================================
+-----------------------------------------------------------------
+Type Name                                         Count Converted
+---- ----                                         ----- ---------
+102  Composite curve                                 26        26
+110  Line                                             2         2
+126  Rational B-spline curve                        146       146
+128  Rational B-spline surface                       13        13
+142  Curve on a parametric surface                   13        13
+144  Trimmed parametric surface                      13        13
+314  Color definition                                 1         1
+_________________________________________________________________
+
+
+=================================================================
+Result Summary
+=================================================================
+SolidWorks Feature Type                Count
+-----------------------                -----
+Solid feature(s)                       1
+Surface feature(s)                     0
+Curve/Sketch feature(s)                0
+--------------------------------------------
+Start time: Saturday, February 04, 2023 12:54:49
+Finish time: Saturday, February 04, 2023 12:54:50
+Processing time: 0 days, 00 hours, 00 mins, 01 secs
