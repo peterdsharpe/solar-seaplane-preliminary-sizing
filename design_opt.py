@@ -75,7 +75,7 @@ LD_cruise = opti.variable(
     init_guess=15,
     lower_bound=0.1,
     log_transform=True,
-)  # TODO close this loop
+)
 
 g = 9.81
 
