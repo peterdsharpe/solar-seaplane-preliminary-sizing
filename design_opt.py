@@ -661,18 +661,11 @@ if __name__ == '__main__':
         sol = opti.debug
     s = lambda x: sol.value(x)
 
-    airplane.substitute_solution(sol)
-    cruise_op_point.substitute_solution(sol)
-    # dyn.substitute_solution(sol)
-    mass_props_TOGW.substitute_solution(sol)
-
-    for v in mass_props.values():
-        v.substitute_solution(sol)
-
-    aero = {
-        k: s(v)
-        for k, v in aero.items() if not isinstance(v, list)
-    }
+    airplane = s(airplane)
+    cruise_op_point = s(cruise_op_point)
+    mass_props_TOGW = s(mass_props_TOGW)
+    mass_props = s(mass_props)
+    aero = s(aero)
 
     avl_aero = asb.AVL(
         airplane=airplane,
@@ -704,7 +697,7 @@ if __name__ == '__main__':
         "Cma"                   : fmt(aero['Cma']),
         "Cnb"                   : fmt(aero['Cnb']),
         "Cm"                    : fmt(aero['Cm']),
-        "Wing Reynolds Number"  : eng_string(cruise_op_point.reynolds(wing.mean_aerodynamic_chord())),
+        "Wing Reynolds Number"  : eng_string(cruise_op_point.reynolds(s(wing.mean_aerodynamic_chord()))),
         "AVL: Cma + Cma_fuse"   : avl_aero['Cma'] + aero['Cma_fuse'],
         "AVL: Cnb + Cnb_fuse"   : avl_aero['Cnb'] + aero['Cnb_fuse'],
         "AVL: Cm"               : avl_aero['Cm'],

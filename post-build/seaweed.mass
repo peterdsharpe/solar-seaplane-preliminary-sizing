@@ -1,0 +1,119 @@
+# MOST RECENT MEASUREMENT: APR-9
+#
+# seaweed.mass
+# Hil Dei (100% Resolution; 120% Zoom; 2560x1440; Unwrapped)
+# Please update the date to reflect the date of the most recent modification. 
+#
+#  Seaway Mini .mass file
+#  Mass & Inertia breakdown
+#
+#  xyz is location of item's own CG
+#  Ixx.. are item's inertias about item's own CG
+#
+#   x back 	(axis of boom)
+#   y right 	(axis of wingspan)
+#   z up    	(axis of altitude)
+#
+#  x,y,z system here must have origin at same location as AVL input file
+#
+Lunit = 1 m	
+Munit = 1 kg
+Tunit = 1.0 s
+
+g   = 9.81
+rho = 1.225
+
+# Origin Taken as TIP OF LEADING EDGE OF (RIGHT) WING
+# mass		      x	     y            z	       Ixx	        Iyy         Izz				! [ Ixy  Ixz  Iyz ] were not used. 				   
+0.3730  0.105833  0.000000  0.000000  0  0  0								! Spar										x 2						Wing					Hillel 	- measured Apr-7
+0.2400  0.105833  0.000000  0.000000  0  0  0								! Center Piece (everything including fittings, linkages except ribs, glue)								Wing					Morgan 	- estimate
+0.0300  0.105833  0.000000  0.000000  0  0  0								! Aileron Hinge Set														Wing					Peter 	- estimate
+0.0250  0.105833  0.000000  0.000000  0  0  0								! Sponson Mounts														Wing					Hillel	- estimate
+1.6920  0.105833  0.000000  0.000000  0.017416  0.000000  0.017416					! Foam Core (for BOTH wings)													Wing					Hillel 	- measured Apr-7
+0.2460  0.105833  0.000000  0.000000  0  0  0								! Skin (+ Added Resin)														Wing					Hillel 	- estimate
+0.1750  0.105833  0.000000  0.000000  0  0  0								! Ribs (Cumulative for all servos)													Wing					Hillel 	- measured Apr-7
+0.1420  0.105833  0.000000  0.000000  0  0  0								! Joiner Rod															Wing					Hillel 	- measured Apr-8
+0.0434  0.105833  0.000000  0.000000  0  0  0								! Aileron Servo #1								(servos)						Wing					Hillel 	- measured Apr-7
+0.0434  0.105833  0.000000  0.000000  0  0  0								! Aileron Servo #2								(servos)						Wing					Hillel 	- measured Apr-7
+0.0800  -0.076200  0.000000  0.000000  0.007390  0.000000  0.007390					! Propellers (+ 5g fit) 								x 2 (propellers)					Power/Wing				Hillel 	- measured Apr-7
+0.3540  -0.050800  0.000000  0.000000  0.028997  0.004137  0.028997					! Motor Unmounted								x 2 (motors)					Power/Wing				Hillel 	- measured Apr-7
+0.1640  -0.050800  0.000000  0.000000  0  0  0								! Motor Mount									x 2 (motors)					Power/Wing				Hillel 	- measured Apr-7
+0.0840  0.050800  0.000000  0.000000  0  0  0								! Motor Boom   									x 2 (motors)					Power/Wing				Hillel 	- measured Apr-7
+0.6336  0.211665  0.000000  0.000000  0  0  0								! Solar Cells (6.8g raw + 2g laminate sheet)						x 72 (solar_sells)					Power/Wing				Hillel 	- measured Apr-7
+0.0180  0.211665  0.000000  0.000000  0  0  0								! Solar Cell Dogbones								x 60						Power/Wing				Hillel	- measured Apr-8
+0.1193  0.000000  0.000000 -0.064133  0  0  0								! Servo Wiring/Ft								x 5ft (wiring)					Power					Hillel 	- estimate
+0.0400  -0.216098  0.000000 -0.192399  0  0  0							! MPPTs without case								x 2 (MPPTs)					Power					Peter  	- estimate
+0.1790  -0.216098  0.000000 -0.192399  0  0  0							! Iron Bird  									(avionics)					Power/Integration			Amira   - estimate Apr-7
+0.0670  0.000000  0.000000 -0.064133  0  0  0								! Iron Bird Wiring/Ft 								x 3ft (wiring)					Power					Amira	- estimate Apr-7
+0.5040  0.836966  0.000000  0.000000  0.000000  0.121709  0.121709					! Boom 										(boom)						Tail					Hillel 	- measured Apr-7
+0.2150  1.497249  0.000000  0.255939  0.000918  0.255592  0.255592					! Horizontal Tail 								(h_stab)						Tail					Hillel 	- measured Apr-7
+0.1452  1.416854  0.000000  0.255939  0.000130  0.108399  0.108399					! Vertical Tail 									(v_stab)						Tail					Hillel 	- measured Apr-7
+0.0188  1.497249  0.000000  0.255939  0  0  0								! Elevator Servo									x 2 (servos)					Tail					Hillel 	- measured Apr-7
+0.0089  1.416854  0.000000  0.255939  0  0  0								! Rudder Servo									(servos)						Tail					Hillel 	- measured Apr-7
+0.0100  0.900000  0.000000  0.000000  0  0  0								! Sponson Mounts														Tail					NOT BUILT YET
+0.3910  -0.266898  0.000000 -0.192399  0  0  0							! Battery 									(battery)					Fuselage/Power				Hillel 	- measured Apr-7	
+0.0035  -0.266898  0.000000 -0.192399  0  0  0							! XT60 Battery Adapter 								(Black Box)					Fuselage					Hillel 	- measured Apr-7
+0.3160  0.056902  0.000000 -0.192399  0  0  0								! Skin 										(fuselage_skin)					Fuselage					NOT BUILT YET
+0.1050  0.056367  0.000000 -0.192399  0  0  0								! Bulkheads  									x 3 (fuselage_bulkheads)				Fuselage					NOT BUILT YET
+0.2500  0.056902  0.000000 -0.192399  0  0  0								! Truss (176 as of Apr-7, 8" bean missing, 25% markup)										Fuselage					Hillel 	- measured Apr-7
+0.0660  0.105833  0.000000  0.000000  0  0  0								! ESC 										x 2 (ESCs)					Avionics				Hillel 	- measured Apr-7
+0.0200  -0.216098  0.000000 -0.192399  0  0  0							! Servo Power Board/Battery External Circuit											Avionics				Hillel 	- guess
+0.2000  0.168814  0.000000 -0.035685  0.241574  0.104045  0.335970					! Miscellaneous Epoxy, CA, Kicker						(glue_weight)					N/A					N/A
+
+###################################################
+# UNKNOWNS
+###################################################
+
+0.1250  0.056902  0.000000 -0.192399  0  0  0								! Floor 										(fuselage)					Fuselage					Alberto 	- Guess
+0.0500  -0.216098  0.000000 -0.192399  0  0  0							! Black Box Shell									(Black Box)					Avionics				Hillel 	- Guess
+0.3000  0.105833  0.000000 -0.192400  0  0  0								! Sponsons									x 2						Wing					Hillel 	- Guess
+0.0100  0.105833  0.000000  0.000000  0  0  0								! Control Horns									x 2						Wing					Peter 	- Guess
+0.0100  1.497249  0.000000  0.255939  0  0  0								! Control Horns Horzontal							x 2						Tail 					Peter	- Guess
+0.0050  1.416854  0.000000  0.255939  0  0  0								! Control Horns Vertical								x 1						Tail 					Peter	- Guess
+0.0500  1.416854  0.000000  0.255939  0  0  0								! Speed Sensor (brass, pressure transducer, wiring)					(peto_tubes)					Tail					Hillel 	- Guess
+
+###################################################
+# COMMMENTS
+###################################################
+
+! Servo Position Data: 0.836966  0.000000  0.000000  0.000000  0.000000  0.000000 SUBJECT TO CHANGE
+! 25x14'' Laminate Sheet: 24.6g -> 5x5 is 1.757g
+! Saddle Raw: 59.6g
+! TOP 1: 316g
+! TOP 2: 337g
+! BOT 1: 511g
+! BOT 2: 528g
+
+! Iron Bird:
+! PXC6: 45g
+! GPS: 24g
+! Telemetry Radio: 23g
+! Current Sensor 1: 32g
+! Current Sensor 2: 32g
+! Air Data Computer: 10g
+! Radio Receiver: 13g
+! Internal Wiring: 67g
+
+! Wing tips may have been double counted; verification needed. <VERIFIED AS DOUBLE COUNTED ON APR-8>
+
+###################################################
+# OUTDATED DATA
+###################################################
+!.1100		0.105833  0.000000  0.000000  0.017416  0.000000  0.017416							! Aileron Hinge Set														Wing
+!.2460              -0.216098  0.000000 -0.192399  0.000000  0.000000  0.000000							! Iron Bird  									(avionics)					Power/Integration			Amira
+!.1650		0.000000  0.000000 -0.064133  0.000000  0.000000  0.000000							! Iron Bird Wiring/Ft 								x 3ft (wiring)					Power				
+!.8270															! Foam Core 1															Wing					Hillel 	- measured Apr-7
+!.8650															! Foam Core 2															Wing					Hillel 	- measured Apr-7
+!.1730															! Skin 1 (+Resin Added)														Wing
+!.1730															! Skin 2 (+Resin Added)														Wing
+!.2000		0.105833  0.000000  0.000000  2.880185  0.000000  2.880185							! Tips										x 2						Wing					Hillel 	- Guess
+!.0159	           -0.216098  0.000000 -0.192399  0	0	0								! R8 Pro + RX Receiver								(Black Box)					Power					****MEASURED (Unrecalled Date)
+
+! FC1: 440G
+! FC2: 340G
+! FC3: 280G
+! FC4: 265G
+! FC5: 0.356
+! FC6: 059.6G
+
+! 3 Cells, 2 Dogbones , 18x6.5" Lamninate Sheet: 32.6g -> 3(6.8) + 8.223g + 2x = 32.6 -> x = 1.9885g per dogbone 
