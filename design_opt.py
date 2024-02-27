@@ -97,7 +97,7 @@ design_thrust_climb_total = (
 """
 Coordinate system:
 
-Geometry axes. Datum (0, 0, 0) is coincident with the quarter-chord-point of the centerline cross section of the main 
+Geometry axes. Datum (0, 0, 0) is coincident with the leading edge of the centerline cross section of the main 
 wing.
     
 """
@@ -122,12 +122,6 @@ airfoils = {
     ]
 }
 
-for v in airfoils.values():
-    v.generate_polars(
-        cache_filename=f"cache/{v.name}.json",
-        alphas=np.linspace(-12, 12, 30)
-    )
-
 
 def wing_rot(xyz):
     dihedral_rot = np.rotation_matrix_3D(
@@ -135,7 +129,10 @@ def wing_rot(xyz):
         axis="X"
     )
 
-    return dihedral_rot @ np.array(xyz)
+    return dihedral_rot @ (
+            np.array(xyz) +
+            np.array([-wing_root_chord / 4, 0, 0])
+    ) + np.array([wing_root_chord / 4, 0, 0])
 
 
 wing = asb.Wing(
@@ -144,7 +141,7 @@ wing = asb.Wing(
     xsecs=[
         asb.WingXSec(
             xyz_le=wing_rot([
-                -wing_root_chord / 4,
+                0,
                 0,
                 0,
             ]),
@@ -154,7 +151,7 @@ wing = asb.Wing(
         ),
         asb.WingXSec(
             xyz_le=wing_rot([
-                -wing_root_chord / 4,
+                0,
                 wing_span / 2 * wing_y_break_fraction,
                 0
             ]),
@@ -164,7 +161,7 @@ wing = asb.Wing(
         ),
         asb.WingXSec(
             xyz_le=wing_rot([
-                -wing_root_chord / 4,
+                0,
                 wing_span / 2,
                 0
             ]),
@@ -189,7 +186,7 @@ vstab_volume_coefficient = 0.030  # Potentially as low as 0.0111
 vstab_aspect_ratio = 2.5
 vstab_taper_ratio = 0.7
 
-vstab_area = vstab_volume_coefficient * wing.area() * wing.span() / x_tail
+vstab_area = vstab_volume_coefficient * wing.area() * wing.span() / (x_tail - wing_root_chord / 4)
 vstab_span = (vstab_area * vstab_aspect_ratio) ** 0.5
 vstab_chord = (vstab_area / vstab_aspect_ratio) ** 0.5
 vstab_airfoil = airfoils['ht14']
@@ -553,9 +550,7 @@ mass_props['wing_sponson_mounts'] = copy.copy(
 ) * 2  # a total guess
 
 ### Summation
-mass_props_TOGW = asb.MassProperties(mass=0)
-for k, v in mass_props.items():
-    mass_props_TOGW = mass_props_TOGW + v
+mass_props_TOGW = sum(mass_props.values())
 
 ### Add glue weight
 mass_props['glue_weight'] = mass_props_TOGW * 0.08
@@ -648,7 +643,7 @@ breakeven_climb_angle_deg = np.arcsind(breakeven_climb_rate / cruise_op_point.ve
 opti.subject_to([
     design_mass_TOGW > mass_props_TOGW.mass,  # mass closure
     LD_cruise < 0.75 * aero['LD_ideal'],  # aerodynamics closure, with knockdown to account for imperfect flying,
-    aero['CL'] > 0,  # This keeps the velocity from getting confused
+    aero['CL'] > 0,  # This keeps the d(lift)/d(velocity) gradient from going negative
     aero['CL'] < 0.8,  # can't be riding the stall line too hard
     aero['L'] / 9.81 > design_mass_TOGW  # airplane must lift itself
 ])
